@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-04-16T21:20:16.787561",
+  "recommended_template": "A",
+  "scores": {
+    "A": {
+      "refusal": 0,
+      "parse_fail": 42,
+      "success": 438,
+      "total": 480
+    },
+    "B": {
+      "refusal": 0,
+      "parse_fail": 72,
+      "success": 408,
+      "total": 480
+    },
+    "C": {
+      "refusal": 0,
+      "parse_fail": 83,
+      "success": 397,
+      "total": 480
+    }
+  }
+}

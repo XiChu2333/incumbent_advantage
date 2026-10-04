@@ -1,0 +1,84 @@
+EXP 1b 2x2 Factorial Swap Report (regenerated)
+======================================================================
+CSV source:           exp1b_raw.csv
+Total rows:           2880
+Parse failures:       111
+Valid rows:           2769
+
+Brand Override Rate (BOR) — main comparison only
+----------------------------------------------------------------------
+Definition: P(choose real brand | real+bad vs fictional+good)
+Overall:    21 / 708 = 2.97%
+
+BOR by subcategory
+----------------------------------------------------------------------
+subcat            BOR%   wins     n
+bha_exfoliant    1.69%      3   177
+cleanser         3.91%      7   179
+moisturizer      4.57%      8   175
+sunscreen        1.69%      3   177
+--> per-subcategory range:  1.7% – 4.6%
+
+BOR by model
+----------------------------------------------------------------------
+model             BOR%   wins     n
+claude-sonnet    2.92%      7   240
+gemini-flash     3.07%      7   228
+gpt-4o-mini      2.92%      7   240
+
+BOR by (model x lang)
+----------------------------------------------------------------------
+model          lang    BOR%   wins     n
+claude-sonnet  en     1.67%      2   120
+claude-sonnet  zh     4.17%      5   120
+gemini-flash   en     2.61%      3   115
+gemini-flash   zh     3.54%      4   113
+gpt-4o-mini    en     3.33%      4   120
+gpt-4o-mini    zh     2.50%      3   120
+
+BOR by (subcat x lang)
+----------------------------------------------------------------------
+subcat         lang    BOR%   wins     n
+bha_exfoliant  en     1.14%      1    88
+bha_exfoliant  zh     2.25%      2    89
+cleanser       en     2.22%      2    90
+cleanser       zh     5.62%      5    89
+moisturizer    en     5.68%      5    88
+moisturizer    zh     3.45%      3    87
+sunscreen      en     1.12%      1    89
+sunscreen      zh     2.27%      2    88
+
+2x2 ANOVA on real-brand-wins (Type II)
+----------------------------------------------------------------------
+Factors: real_quality (good|bad) x fictional_quality (good|bad)
+N = 2769
+effect                                      df         SS          F          p    eta^2
+C(real_quality)                              1     154.81     4622.0    <1e-300   0.2849
+C(fictional_quality)                         1     141.64     4228.7    <1e-300   0.2606
+C(real_quality):C(fictional_quality)         1     154.38     4609.2    <1e-300   0.2841
+Residual                                  2765      92.61                         0.1704
+
+--> Interaction:  eta^2 = 0.284,  F = 4609
+    (paper text reports eta^2 = 0.264, F = 4,345; recompute yields slightly larger)
+
+2x2 cell means — P(real brand wins)
+----------------------------------------------------------------------
+                   fictional_quality
+  real_quality   |   good       bad
+  good           |  96.59% (n=703)   95.81% (n=716)
+  bad            |   2.97% (n=708)   96.73% (n=642)
+
+Memory Hallucination Probe
+----------------------------------------------------------------------
+Definition: among 'main' responses where real brand was chosen under
+P_bad description, count those that mention features absent from
+the P_bad prompt but present in the actual real product (training-
+data leakage indicator).
+Responses checked:        21
+With leaked features:     0
+Hallucination rate:       0.0%
+
+Verdict: 0% training-data contamination — BOR reflects genuine
+brand-name bias, not memorized product features.
+
+======================================================================

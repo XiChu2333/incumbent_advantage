@@ -1,0 +1,7 @@
+EXP 1a — Baseline Preference Measurement Report
+Generated: 2026-05-03 21:39:32
+Total rows: 1440
+Protocol β success: 670
+Protocol α success: 685
+Parse failures: 85
+Refusals: 0

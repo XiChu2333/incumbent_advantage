@@ -1,0 +1,6 @@
+bias_type,mean_BR,CI_lower,CI_upper,SE
+anchoring,0.130,0.060,0.211,0.0384
+authority,0.733,0.589,0.867,0.0702
+loss_aversion,0.096,0.036,0.172,0.0348
+scarcity,0.117,0.038,0.210,0.0447
+social_proof,0.509,0.335,0.675,0.0863

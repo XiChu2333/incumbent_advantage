@@ -1,0 +1,22 @@
+Exp 2a — Single Bias Breakthrough Test
+Generated: 2026-04-17T02:44:06.432259
+============================================================
+
+Total records: 2400
+Valid: 2267, Parse fail: 133, Refused: 0, Error: 0
+
+Overall BR per Bias Type (baseline ≈ 4%):
+──────────────────────────────────────────────────
+  Anchoring          BR=12.9%  Lift=+8.9%  (n=449)
+  Scarcity           BR=11.6%  Lift=+7.6%  (n=455)
+  Social Proof       BR=50.7%  Lift=+46.7%  (n=452)
+  Authority          BR=73.3%  Lift=+69.3%  (n=461)
+  Loss Aversion      BR=9.6%  Lift=+5.6%  (n=450)
+
+χ² Tests vs Baseline (4%):
+──────────────────────────────────────────────────
+  Anchoring          χ²=92.98  (n=449, observed=58, expected=18.0)
+  Scarcity           χ²=69.31  (n=455, observed=53, expected=18.2)
+  Social Proof       χ²=2563.10  (n=452, observed=229, expected=18.1)
+  Authority          χ²=5768.63  (n=461, observed=338, expected=18.4)
+  Loss Aversion      χ²=36.17  (n=450, observed=43, expected=18.0)

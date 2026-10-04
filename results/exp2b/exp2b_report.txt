@@ -1,0 +1,58 @@
+EXP 2b Intensity Gradient & Stacking Paradox Report (regenerated)
+======================================================================
+Sources:
+  exp2a_raw.csv (moderate, all 5 biases): 2400 rows (2267 valid)
+  exp2b_raw.csv (subtle/aggressive + auth_sp): 1680 rows (1587 valid)
+Combined valid records: 3854
+
+Intensity gradient — Authority and Social Proof BR (%) per model
+----------------------------------------------------------------------
+
+--- bias: authority ---
+intensity     claude-sonnet   gemini-flash    gpt-4o-mini
+subtle           13.75% n= 80     11.67% n= 60     15.00% n= 80
+moderate         55.00% n=160     99.29% n=141     68.75% n=160
+aggressive        8.75% n= 80    100.00% n= 70     92.50% n= 80
+
+--- bias: social_proof ---
+intensity     claude-sonnet   gemini-flash    gpt-4o-mini
+subtle            2.50% n= 80      8.57% n= 70     10.00% n= 80
+moderate          6.88% n=160     81.06% n=132     69.38% n=160
+aggressive        0.00% n= 80     78.12% n= 64     80.00% n= 80
+
+Model archetype verdict (Authority intensity gradient)
+----------------------------------------------------------------------
+  claude-sonnet  subtle= 13.8%  moderate= 55.0%  aggressive=  8.8%  -> INVERTED-U (peaks at moderate)
+  gemini-flash   subtle= 11.7%  moderate= 99.3%  aggressive=100.0%  -> MONOTONIC (rising with intensity)
+  gpt-4o-mini    subtle= 15.0%  moderate= 68.8%  aggressive= 92.5%  -> MONOTONIC (rising with intensity)
+
+Stacking Paradox — Authority+Social Proof (auth_sp) vs single biases
+----------------------------------------------------------------------
+Goal: verify the paradox where combining biases either drops below or
+super-adds individual-bias BRs, depending on the model.
+
+
+--- intensity: subtle ---
+  model            Authority   SocialProof    Auth+SP                verdict
+  claude-sonnet       13.75%         2.50%     11.25%        between max/min
+  gemini-flash        11.67%         8.57%     32.76%         super-additive
+  gpt-4o-mini         15.00%        10.00%     32.50%         super-additive
+
+--- intensity: moderate ---
+  model            Authority   SocialProof    Auth+SP                verdict
+  claude-sonnet       55.00%         6.88%     21.25%        between max/min
+  gemini-flash        99.29%        81.06%    100.00%         super-additive
+  gpt-4o-mini         68.75%        69.38%     91.25%         super-additive
+
+--- intensity: aggressive ---
+  model            Authority   SocialProof    Auth+SP                verdict
+  claude-sonnet        8.75%         0.00%      1.25%        between max/min
+  gemini-flash       100.00%        78.12%    100.00%        between max/min
+  gpt-4o-mini         92.50%        80.00%     96.25%         super-additive
+
+Headline numbers (matches §4.2 of paper):
+  claude-sonnet: Authority moderate = 55.0%  Auth+SP moderate = 21.2%
+  gemini-flash: Authority moderate = 99.3%  Auth+SP moderate = 100.0%
+  gpt-4o-mini: Authority moderate = 68.8%  Auth+SP moderate = 91.2%
+
+======================================================================

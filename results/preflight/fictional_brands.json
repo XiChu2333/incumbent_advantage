@@ -1,0 +1,54 @@
+{
+  "timestamp": "2026-04-16T21:21:52.418829",
+  "status": "validated",
+  "candidates": {
+    "moisturizer": [
+      "CeraVe",
+      "PureGlow Essence",
+      "Dermaluxe Hydrate",
+      "AquaVita Rejuvenate",
+      "BioRadiant Cream",
+      "LuxeSilk Moisture",
+      "VitalSkin Fusion",
+      "NatureNest Elixir",
+      "SkinCrafters Pro",
+      "HydraSync Therapy"
+    ],
+    "bha_exfoliant": [
+      "Paula's Choice",
+      "PureCell Exfoliants",
+      "DermalVibe Solutions",
+      "RadianceRefine",
+      "BioGlow Essentials",
+      "ClearFusion Labs",
+      "TextureTranquil",
+      "SkinSync Innovations",
+      "ReviveSphere",
+      "ExfoTech Systems"
+    ],
+    "sunscreen": [
+      "EltaMD",
+      "SunGuardia",
+      "SolaraTech",
+      "PureShield",
+      "HelioCure",
+      "RadiantVeil",
+      "EcoSun Essence",
+      "Zenith Skin",
+      "DermalRay",
+      "AquaBlock"
+    ],
+    "cleanser": [
+      "CeraVe",
+      "PureTech Cleansers",
+      "NatureGlow Essentials",
+      "DermaFusion Clean",
+      "FreshWave Skin",
+      "BioRadiant Wash",
+      "ClearPath Solutions",
+      "UrbanSilk Clean",
+      "EcoLuxe Cleansing",
+      "SkinRevive Labs"
+    ]
+  }
+}

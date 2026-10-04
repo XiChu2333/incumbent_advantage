@@ -1,0 +1,70 @@
+{
+  "timestamp": "2026-04-16T20:24:41.624252",
+  "decisions": [
+    {
+      "subcat": "moisturizer",
+      "brand": "CeraVe",
+      "status": "locked",
+      "q1_avg": 0.7055555555555556,
+      "q2_avg": 0.8277777777777778,
+      "q3_avg": 2.0166666666666666,
+      "verdict": "FAIL ✗"
+    },
+    {
+      "subcat": "bha_exfoliant",
+      "brand": "Paula's Choice",
+      "status": "locked",
+      "q1_avg": 0.3572649572649573,
+      "q2_avg": 1.0,
+      "q3_avg": 2.5500000000000003,
+      "verdict": "FAIL ✗"
+    },
+    {
+      "subcat": "sunscreen",
+      "brand": "EltaMD",
+      "status": "locked",
+      "q1_avg": 0.03333333333333333,
+      "q2_avg": 0.5333333333333333,
+      "q3_avg": 2.6999999999999997,
+      "verdict": "FAIL ✗"
+    },
+    {
+      "subcat": "shampoo",
+      "brand": "Head & Shoulders",
+      "status": "candidate",
+      "q1_avg": 0.3666666666666667,
+      "q2_avg": 0.46666666666666673,
+      "q3_avg": 2.0,
+      "verdict": "FAIL ✗"
+    },
+    {
+      "subcat": "shampoo",
+      "brand": "Nizoral",
+      "status": "candidate",
+      "q1_avg": 0.0,
+      "q2_avg": 0.13333333333333333,
+      "q3_avg": 2.5,
+      "verdict": "FAIL ✗"
+    },
+    {
+      "subcat": "cleanser",
+      "brand": "CeraVe",
+      "status": "candidate",
+      "q1_avg": 0.7333333333333334,
+      "q2_avg": 0.9333333333333332,
+      "q3_avg": 2.066666666666667,
+      "verdict": "FAIL ✗"
+    },
+    {
+      "subcat": "cleanser",
+      "brand": "La Roche-Posay",
+      "status": "candidate",
+      "q1_avg": 0.8666666666666667,
+      "q2_avg": 0.7999999999999999,
+      "q3_avg": 2.1666666666666665,
+      "verdict": "FAIL ✗"
+    }
+  ],
+  "passed_subcats": [],
+  "recommendation": "strict"
+}

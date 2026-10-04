@@ -1,0 +1,169 @@
+======================================================================
+INCUMBENT AWARENESS PROBE — SUMMARY REPORT
+Generated: 2026-04-16 20:24:41
+======================================================================
+
+──────────────────────────────────────────────────────────────────────
+Q1: Brand in Top-20 Familiarity List
+──────────────────────────────────────────────────────────────────────
+Subcat          Brand                  Model              Lang   Hit%     AvgPos   Pass?
+bha_exfoliant   Paula's Choice         claude-sonnet      en      57.7%   18.7   ✗
+bha_exfoliant   Paula's Choice         claude-sonnet      zh       3.3%   20.0   ✗
+bha_exfoliant   Paula's Choice         gemini-3-flash     en      20.0%   16.0   ✗
+bha_exfoliant   Paula's Choice         gemini-3-flash     zh       0.0%    nan   ✗
+bha_exfoliant   Paula's Choice         gpt-4o-mini        en     100.0%   15.3   ✓
+bha_exfoliant   Paula's Choice         gpt-4o-mini        zh      33.3%   17.0   ✗
+cleanser        CeraVe                 claude-sonnet      en     100.0%    2.8   ✓
+cleanser        CeraVe                 claude-sonnet      zh       0.0%    nan   ✗
+cleanser        CeraVe                 gemini-3-flash     en     100.0%    5.4   ✓
+cleanser        CeraVe                 gemini-3-flash     zh      40.0%   11.5   ✗
+cleanser        CeraVe                 gpt-4o-mini        en     100.0%   11.8   ✓
+cleanser        CeraVe                 gpt-4o-mini        zh     100.0%   14.4   ✓
+cleanser        La Roche-Posay         claude-sonnet      en     100.0%   14.0   ✓
+cleanser        La Roche-Posay         claude-sonnet      zh      80.0%   14.2   ✗
+cleanser        La Roche-Posay         gemini-3-flash     en     100.0%    8.2   ✓
+cleanser        La Roche-Posay         gemini-3-flash     zh      80.0%    8.8   ✗
+cleanser        La Roche-Posay         gpt-4o-mini        en     100.0%    8.6   ✓
+cleanser        La Roche-Posay         gpt-4o-mini        zh      60.0%   15.3   ✗
+moisturizer     CeraVe                 claude-sonnet      en     100.0%    2.6   ✓
+moisturizer     CeraVe                 claude-sonnet      zh       0.0%    nan   ✗
+moisturizer     CeraVe                 gemini-3-flash     en     100.0%    4.9   ✓
+moisturizer     CeraVe                 gemini-3-flash     zh      50.0%   12.5   ✗
+moisturizer     CeraVe                 gpt-4o-mini        en      96.7%   11.2   ✗
+moisturizer     CeraVe                 gpt-4o-mini        zh      76.7%   14.3   ✗
+shampoo         Head & Shoulders       claude-sonnet      en       0.0%    nan   ✗
+shampoo         Head & Shoulders       claude-sonnet      zh      80.0%   13.0   ✗
+shampoo         Head & Shoulders       gemini-3-flash     en      80.0%   16.8   ✗
+shampoo         Head & Shoulders       gemini-3-flash     zh      60.0%   12.3   ✗
+shampoo         Head & Shoulders       gpt-4o-mini        en       0.0%    nan   ✗
+shampoo         Head & Shoulders       gpt-4o-mini        zh       0.0%    nan   ✗
+shampoo         Nizoral                claude-sonnet      en       0.0%    nan   ✗
+shampoo         Nizoral                claude-sonnet      zh       0.0%    nan   ✗
+shampoo         Nizoral                gemini-3-flash     en       0.0%    nan   ✗
+shampoo         Nizoral                gemini-3-flash     zh       0.0%    nan   ✗
+shampoo         Nizoral                gpt-4o-mini        en       0.0%    nan   ✗
+shampoo         Nizoral                gpt-4o-mini        zh       0.0%    nan   ✗
+sunscreen       EltaMD                 claude-sonnet      en       0.0%    nan   ✗
+sunscreen       EltaMD                 claude-sonnet      zh       0.0%    nan   ✗
+sunscreen       EltaMD                 gemini-3-flash     en       0.0%    nan   ✗
+sunscreen       EltaMD                 gemini-3-flash     zh       0.0%    nan   ✗
+sunscreen       EltaMD                 gpt-4o-mini        en       0.0%    nan   ✗
+sunscreen       EltaMD                 gpt-4o-mini        zh      20.0%   20.0   ✗
+
+──────────────────────────────────────────────────────────────────────
+Q2: Brand in Category Top-5 Recommendations
+──────────────────────────────────────────────────────────────────────
+Subcat          Brand                  Model              Lang   Hit%     AvgPos   Pass?
+bha_exfoliant   Paula's Choice         claude-sonnet      en     100.0%    1.0   ✓
+bha_exfoliant   Paula's Choice         claude-sonnet      zh     100.0%    1.0   ✓
+bha_exfoliant   Paula's Choice         gemini-3-flash     en     100.0%    1.0   ✓
+bha_exfoliant   Paula's Choice         gemini-3-flash     zh     100.0%    1.0   ✓
+bha_exfoliant   Paula's Choice         gpt-4o-mini        en     100.0%    1.0   ✓
+bha_exfoliant   Paula's Choice         gpt-4o-mini        zh     100.0%    1.1   ✓
+cleanser        CeraVe                 claude-sonnet      en     100.0%    1.0   ✓
+cleanser        CeraVe                 claude-sonnet      zh     100.0%    2.2   ✓
+cleanser        CeraVe                 gemini-3-flash     en     100.0%    1.0   ✓
+cleanser        CeraVe                 gemini-3-flash     zh     100.0%    2.4   ✓
+cleanser        CeraVe                 gpt-4o-mini        en     100.0%    1.8   ✓
+cleanser        CeraVe                 gpt-4o-mini        zh      60.0%    2.3   ✗
+cleanser        La Roche-Posay         claude-sonnet      en     100.0%    2.0   ✓
+cleanser        La Roche-Posay         claude-sonnet      zh     100.0%    4.2   ✓
+cleanser        La Roche-Posay         gemini-3-flash     en     100.0%    2.0   ✓
+cleanser        La Roche-Posay         gemini-3-flash     zh      20.0%    5.0   ✗
+cleanser        La Roche-Posay         gpt-4o-mini        en     100.0%    2.0   ✓
+cleanser        La Roche-Posay         gpt-4o-mini        zh      60.0%    2.0   ✗
+moisturizer     CeraVe                 claude-sonnet      en     100.0%    1.0   ✓
+moisturizer     CeraVe                 claude-sonnet      zh      33.3%    2.6   ✗
+moisturizer     CeraVe                 gemini-3-flash     en     100.0%    1.0   ✓
+moisturizer     CeraVe                 gemini-3-flash     zh     100.0%    1.0   ✓
+moisturizer     CeraVe                 gpt-4o-mini        en     100.0%    1.1   ✓
+moisturizer     CeraVe                 gpt-4o-mini        zh      63.3%    2.3   ✗
+shampoo         Head & Shoulders       claude-sonnet      en      40.0%    4.0   ✗
+shampoo         Head & Shoulders       claude-sonnet      zh     100.0%    1.0   ✓
+shampoo         Head & Shoulders       gemini-3-flash     en      20.0%    5.0   ✗
+shampoo         Head & Shoulders       gemini-3-flash     zh      20.0%    4.0   ✗
+shampoo         Head & Shoulders       gpt-4o-mini        en      20.0%    5.0   ✗
+shampoo         Head & Shoulders       gpt-4o-mini        zh      80.0%    1.8   ✓
+shampoo         Nizoral                claude-sonnet      en      80.0%    4.2   ✓
+shampoo         Nizoral                claude-sonnet      zh       0.0%    nan   ✗
+shampoo         Nizoral                gemini-3-flash     en       0.0%    nan   ✗
+shampoo         Nizoral                gemini-3-flash     zh       0.0%    nan   ✗
+shampoo         Nizoral                gpt-4o-mini        en       0.0%    nan   ✗
+shampoo         Nizoral                gpt-4o-mini        zh       0.0%    nan   ✗
+sunscreen       EltaMD                 claude-sonnet      en     100.0%    1.0   ✓
+sunscreen       EltaMD                 claude-sonnet      zh       0.0%    nan   ✗
+sunscreen       EltaMD                 gemini-3-flash     en     100.0%    2.0   ✓
+sunscreen       EltaMD                 gemini-3-flash     zh      20.0%    3.0   ✗
+sunscreen       EltaMD                 gpt-4o-mini        en     100.0%    3.8   ✓
+sunscreen       EltaMD                 gpt-4o-mini        zh       0.0%    nan   ✗
+
+──────────────────────────────────────────────────────────────────────
+Q3: Brand Knowledge Depth (0=unknown, 3=detailed)
+──────────────────────────────────────────────────────────────────────
+Subcat          Brand                  Model              Lang   AvgScore   Pass?
+bha_exfoliant   Paula's Choice         claude-sonnet      en        2.40    ✓
+bha_exfoliant   Paula's Choice         claude-sonnet      zh        2.90    ✓
+bha_exfoliant   Paula's Choice         gemini-3-flash     en        3.00    ✓
+bha_exfoliant   Paula's Choice         gemini-3-flash     zh        2.00    ✓
+bha_exfoliant   Paula's Choice         gpt-4o-mini        en        3.00    ✓
+bha_exfoliant   Paula's Choice         gpt-4o-mini        zh        2.00    ✓
+cleanser        CeraVe                 claude-sonnet      en        2.00    ✓
+cleanser        CeraVe                 claude-sonnet      zh        2.00    ✓
+cleanser        CeraVe                 gemini-3-flash     en        2.00    ✓
+cleanser        CeraVe                 gemini-3-flash     zh        2.40    ✓
+cleanser        CeraVe                 gpt-4o-mini        en        2.00    ✓
+cleanser        CeraVe                 gpt-4o-mini        zh        2.00    ✓
+cleanser        La Roche-Posay         claude-sonnet      en        2.00    ✓
+cleanser        La Roche-Posay         claude-sonnet      zh        2.20    ✓
+cleanser        La Roche-Posay         gemini-3-flash     en        2.00    ✓
+cleanser        La Roche-Posay         gemini-3-flash     zh        2.80    ✓
+cleanser        La Roche-Posay         gpt-4o-mini        en        2.00    ✓
+cleanser        La Roche-Posay         gpt-4o-mini        zh        2.00    ✓
+moisturizer     CeraVe                 claude-sonnet      en        2.00    ✓
+moisturizer     CeraVe                 claude-sonnet      zh        2.00    ✓
+moisturizer     CeraVe                 gemini-3-flash     en        2.00    ✓
+moisturizer     CeraVe                 gemini-3-flash     zh        2.10    ✓
+moisturizer     CeraVe                 gpt-4o-mini        en        2.00    ✓
+moisturizer     CeraVe                 gpt-4o-mini        zh        2.00    ✓
+shampoo         Head & Shoulders       claude-sonnet      en        2.00    ✓
+shampoo         Head & Shoulders       claude-sonnet      zh        2.00    ✓
+shampoo         Head & Shoulders       gemini-3-flash     en        2.00    ✓
+shampoo         Head & Shoulders       gemini-3-flash     zh        2.00    ✓
+shampoo         Head & Shoulders       gpt-4o-mini        en        2.00    ✓
+shampoo         Head & Shoulders       gpt-4o-mini        zh        2.00    ✓
+shampoo         Nizoral                claude-sonnet      en        2.00    ✓
+shampoo         Nizoral                claude-sonnet      zh        3.00    ✓
+shampoo         Nizoral                gemini-3-flash     en        2.00    ✓
+shampoo         Nizoral                gemini-3-flash     zh        3.00    ✓
+shampoo         Nizoral                gpt-4o-mini        en        2.00    ✓
+shampoo         Nizoral                gpt-4o-mini        zh        3.00    ✓
+sunscreen       EltaMD                 claude-sonnet      en        3.00    ✓
+sunscreen       EltaMD                 claude-sonnet      zh        3.00    ✓
+sunscreen       EltaMD                 gemini-3-flash     en        3.00    ✓
+sunscreen       EltaMD                 gemini-3-flash     zh        3.00    ✓
+sunscreen       EltaMD                 gpt-4o-mini        en        2.20    ✓
+sunscreen       EltaMD                 gpt-4o-mini        zh        2.00    ✓
+
+======================================================================
+FINAL DECISION TABLE — Subcategory × Brand Pass/Fail
+======================================================================
+Subcat          Brand                  Status     Q1 avg     Q2 avg     Q3 avg     VERDICT
+moisturizer     CeraVe                 locked       70.6%     82.8%     2.02     FAIL ✗
+bha_exfoliant   Paula's Choice         locked       35.7%    100.0%     2.55     FAIL ✗
+sunscreen       EltaMD                 locked        3.3%     53.3%     2.70     FAIL ✗
+shampoo         Head & Shoulders       candidate    36.7%     46.7%     2.00     FAIL ✗
+shampoo         Nizoral                candidate     0.0%     13.3%     2.50     FAIL ✗
+cleanser        CeraVe                 candidate    73.3%     93.3%     2.07     FAIL ✗
+cleanser        La Roche-Posay         candidate    86.7%     80.0%     2.17     FAIL ✗
+
+======================================================================
+RECOMMENDED SUBCATEGORY SELECTION
+======================================================================
+Locked subcategories passing: []
+Candidate subcategories passing: []
+Total passing: 0
+→ Recommendation: STRICT path ($505 budget)
+
+[shampoo] Winner: Head & Shoulders (Q2=46.7% vs Nizoral=13.3%)
+
+[cleanser] Winner: CeraVe (Q2=93.3% vs La Roche-Posay=80.0%)

@@ -1,0 +1,6 @@
+EXP 1d — F-Statistic Causal Decomposition Report
+Generated: 2026-05-03 20:21:10
+Parsed rows: 4542, ParseFail: 243
+η²_brand = 0.0241
+η²_params = 0.8317
+η²_position = 0.0681

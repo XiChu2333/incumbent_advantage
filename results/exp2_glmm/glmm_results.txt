@@ -1,0 +1,88 @@
+Exp 2 — GLMM / GEE Analysis Results
+======================================================================
+
+Model 1: GEE on Exp 2a — Bias Type Effect (moderate)
+----------------------------------------------------------------------
+                               GEE Regression Results                              
+===================================================================================
+Dep. Variable:             chose_fictional   No. Observations:                 2267
+Model:                                 GEE   No. clusters:                        3
+Method:                        Generalized   Min. cluster size:                 667
+                      Estimating Equations   Max. cluster size:                 800
+Family:                           Binomial   Mean cluster size:               755.7
+Dependence structure:         Exchangeable   Num. iterations:                     6
+Date:                     Sat, 02 May 2026   Scale:                           1.000
+Covariance type:                    robust   Time:                         17:03:54
+=========================================================================================================================
+                                                            coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------------------------------
+Intercept                                                -1.8944      0.766     -2.472      0.013      -3.397      -0.392
+C(bias_type, Treatment('anchoring'))[T.authority]         2.9115      0.972      2.997      0.003       1.007       4.816
+C(bias_type, Treatment('anchoring'))[T.loss_aversion]    -0.3379      0.036     -9.383      0.000      -0.409      -0.267
+C(bias_type, Treatment('anchoring'))[T.scarcity]         -0.1202      0.087     -1.378      0.168      -0.291       0.051
+C(bias_type, Treatment('anchoring'))[T.social_proof]      1.9293      0.744      2.593      0.010       0.471       3.388
+==============================================================================
+Skew:                          0.4659   Kurtosis:                       0.1523
+Centered skew:                 0.1509   Centered kurtosis:             -0.0392
+==============================================================================
+
+Model 2: GEE on Exp 2b — Bias × Intensity
+----------------------------------------------------------------------
+                               GEE Regression Results                              
+===================================================================================
+Dep. Variable:             chose_fictional   No. Observations:                  904
+Model:                                 GEE   No. clusters:                        3
+Method:                        Generalized   Min. cluster size:                 264
+                      Estimating Equations   Max. cluster size:                 320
+Family:                           Binomial   Mean cluster size:               301.3
+Dependence structure:         Exchangeable   Num. iterations:                     6
+Date:                     Sat, 02 May 2026   Scale:                           1.000
+Covariance type:                    robust   Time:                         17:03:54
+========================================================================================================================================================================
+                                                                                                           coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Intercept                                                                                               -1.7650      0.034    -51.984      0.000      -1.831      -1.698
+C(bias_type, Treatment('authority'))[T.social_proof]                                                    -0.7763      0.295     -2.632      0.008      -1.354      -0.198
+C(intensity, Treatment('subtle'))[T.moderate]                                                         4.247e-16   1.04e-17     40.933      0.000    4.04e-16    4.45e-16
+C(intensity, Treatment('subtle'))[T.aggressive]                                                          2.4407      1.109      2.202      0.028       0.268       4.614
+C(bias_type, Treatment('authority'))[T.social_proof]:C(intensity, Treatment('subtle'))[T.moderate]            0          0        nan        nan           0           0
+C(bias_type, Treatment('authority'))[T.social_proof]:C(intensity, Treatment('subtle'))[T.aggressive]     0.1798      0.498      0.361      0.718      -0.796       1.156
+==============================================================================
+Skew:                          0.2334   Kurtosis:                      -0.5652
+Centered skew:                 0.5239   Centered kurtosis:              0.5476
+==============================================================================
+
+Model 3: GEE Combined — Bias + Language
+----------------------------------------------------------------------
+                               GEE Regression Results                              
+===================================================================================
+Dep. Variable:             chose_fictional   No. Observations:                 2267
+Model:                                 GEE   No. clusters:                        3
+Method:                        Generalized   Min. cluster size:                 667
+                      Estimating Equations   Max. cluster size:                 800
+Family:                           Binomial   Mean cluster size:               755.7
+Dependence structure:         Exchangeable   Num. iterations:                    28
+Date:                     Sat, 02 May 2026   Scale:                           1.000
+Covariance type:                    robust   Time:                         17:03:54
+=========================================================================================================================
+                                                            coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------------------------------
+Intercept                                                -2.4702      0.790     -3.128      0.002      -4.018      -0.922
+C(bias_type, Treatment('anchoring'))[T.authority]         3.1379      1.171      2.680      0.007       0.843       5.433
+C(bias_type, Treatment('anchoring'))[T.loss_aversion]    -0.4482      0.039    -11.427      0.000      -0.525      -0.371
+C(bias_type, Treatment('anchoring'))[T.scarcity]         -0.1442      0.167     -0.863      0.388      -0.472       0.183
+C(bias_type, Treatment('anchoring'))[T.social_proof]      2.2007      0.905      2.433      0.015       0.428       3.974
+C(lang, Treatment('en'))[T.zh]                           -0.5190      0.227     -2.287      0.022      -0.964      -0.074
+==============================================================================
+Skew:                          0.5928   Kurtosis:                      -0.1576
+Centered skew:                 0.2914   Centered kurtosis:             -0.3392
+==============================================================================
+
+Model 4: Clustered Bootstrap (2000 iter) — Overall BR
+----------------------------------------------------------------------
+Bias Type             BR Mean               95% CI       SE
+anchoring               0.130 [  0.060,   0.211]   0.0384
+authority               0.733 [  0.589,   0.867]   0.0702
+loss_aversion           0.096 [  0.036,   0.172]   0.0348
+scarcity                0.117 [  0.038,   0.210]   0.0447
+social_proof            0.509 [  0.335,   0.675]   0.0863

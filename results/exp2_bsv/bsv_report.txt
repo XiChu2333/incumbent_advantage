@@ -1,0 +1,57 @@
+Bias Surplus Value (BSV) Derivation Report
+======================================================================
+Derivation method:
+  Given a target BR observed in Exp 2a (cognitive-bias condition),
+  compute the equivalent quality-dimension level x in Exp 1c that
+  yields the same BR. Linear interpolation between bracketing
+  levels is the primary method; 4-param logistic is reported when
+  the fit is well-conditioned.
+
+Inputs:
+  Exp 1c gradient CSV: exp1c_raw.csv  (9220 valid rows)
+  Exp 2a bias CSV:     exp2a_raw.csv  (2267 valid rows)
+
+Authority moderate BR (Exp 2a) — target for BSV computation
+----------------------------------------------------------------------
+  Overall:        73.32%  (n = 461)
+  claude-sonnet   55.00%  (n = 160)
+  gemini-flash    99.29%  (n = 141)
+  gpt-4o-mini     68.75%  (n = 160)
+
+Authority BSV (overall, headline)
+----------------------------------------------------------------------
+dimension        linear      sigmoid note                    
+rating           +0.173       +0.110  
+price            15.34%          n/a  
+reviews           1.92x          n/a  
+
+Authority BSV (per model)
+----------------------------------------------------------------------
+model                  rating          price        reviews
+claude-sonnet             n/a          7.07%          1.61x  // rating max BR=42.5% < target 55.0%
+gemini-flash              n/a            n/a            n/a  // rating max BR=95.2% < target 99.3%; price max BR=95.2% < target; reviews undefined
+gpt-4o-mini             0.073            n/a          3.33x  // price max BR=57.5% < target
+
+Full BSV table (every bias, moderate intensity, overall)
+----------------------------------------------------------------------
+bias               BR%     n     rating      price    reviews
+anchoring         12.9   449     +0.012      1.47%      1.12x
+authority         73.3   461     +0.173     15.34%      1.92x
+loss_aversion      9.6   450     +0.006      0.94%      1.07x
+scarcity          11.7   455     +0.010      1.27%      1.10x
+social_proof      50.7   452     +0.077      7.44%      1.62x
+
+Notes
+----------------------------------------------------------------------
+- Linear interpolation is conservative: it is well-defined whenever
+  the target BR lies between two adjacent gradient levels.
+- Sigmoid (4-param logistic) often fails to converge on dimensions
+  whose response saturates within the experimental range; we report
+  it only when it succeeds.
+- Per-model BSVs are undefined when the model's gradient curve does
+  not span the per-model Authority BR target (e.g. Claude's rating
+  curve saturates at ~42%, but Claude's Authority BR is 55%).
+- Marketing biases (Anchoring, Scarcity, Loss Aversion) hover near
+  the L0 baseline (BR ≈ 4%), so their BSV ≈ 0 in every dimension.
+
+======================================================================

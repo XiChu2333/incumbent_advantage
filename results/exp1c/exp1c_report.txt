@@ -1,0 +1,65 @@
+EXP 1c Step-Function Gradient Report (regenerated)
+======================================================================
+CSV source:           exp1c_raw.csv
+Total rows:           9600
+Parse failures:       380
+Valid rows:           9220
+
+Overall BR vs gradient level (per dimension)
+----------------------------------------------------------------------
+dim                 L0         L1         L2         L3         L4
+rating         6.0%@0.0   64.3%@0.1   76.7%@0.2   75.1%@0.3   75.1%@0.4
+price          3.6%@0.0   66.8%@10.0   79.0%@20.0   78.8%@30.0   81.5%@50.0
+reviews        4.2%@1.0   79.7%@2.0   87.4%@5.0   89.8%@10.0   89.0%@20.0
+ingredient     4.2%@0.0   77.3%@1.0   86.3%@2.0   84.3%@3.0   76.6%@4.0
+
+L0 BR range across dimensions: 3.6% – 6.0%
+L1 BR range across dimensions: 64.3% – 79.7%
+
+50% breakthrough threshold (overall, per dimension)
+----------------------------------------------------------------------
+dim               linear      sigmoid   L1 value
+rating             0.075        0.094      0.100
+price              7.340          n/a     10.000
+reviews            1.606          n/a      2.000
+ingredient         0.627        0.858      1.000
+
+Headline thresholds (linear interpolation):
+  rating:  +0.075 stars  (L1 = +0.10)
+  price:   7.34% discount  (L1 = 10%)
+  reviews: 1.61x  (L1 = 2.0x)
+
+Per-model BR vs gradient level (rating, price, reviews)
+----------------------------------------------------------------------
+
+--- rating ---
+  claude-sonnet  L0:   5.6% L1:  22.5% L2:  42.5% L3:  38.1% L4:  36.9%
+  gemini-flash   L0:   6.0% L1:  83.3% L2:  94.4% L3:  93.8% L4:  95.2%
+  gpt-4o-mini    L0:   6.2% L1:  91.9% L2:  95.0% L3:  95.0% L4:  95.0%
+
+--- price ---
+  claude-sonnet  L0:   3.8% L1:  76.2% L2:  88.1% L3:  89.4% L4:  93.1%
+  gemini-flash   L0:   3.3% L1:  76.3% L2:  93.9% L3:  95.1% L4:  95.2%
+  gpt-4o-mini    L0:   3.8% L1:  50.6% L2:  57.5% L3:  53.8% L4:  57.5%
+
+--- reviews ---
+  claude-sonnet  L0:   3.8% L1:  87.5% L2:  91.9% L3:  89.4% L4:  84.4%
+  gemini-flash   L0:   3.3% L1:  92.0% L2:  93.2% L3:  95.7% L4:  92.6%
+  gpt-4o-mini    L0:   5.6% L1:  61.3% L2:  78.1% L3:  85.0% L4:  90.6%
+
+Per-model 50% threshold (linear interpolation)
+----------------------------------------------------------------------
+dim             claude        gpt     gemini
+rating          NA<42%      0.051      0.057
+price            6.379      9.867      6.397
+reviews          1.552      1.798      1.526
+
+Sigmoid fit parameters (overall)
+----------------------------------------------------------------------
+dim                a        b          k         x0
+rating         0.060    0.756     176.95      0.091
+price          0.352    0.619 1150822.88 -462783.057
+reviews        0.700    0.890  -46715.86 -22693.306
+ingredient     0.042    0.824      16.25      0.836
+
+======================================================================
