@@ -1,0 +1,19 @@
+EXP 1d — variance decomposition (eta^2 on target_rank), by language
+
+--- lang = ALL  (n = 14395) ---
+  eta2_brand_real_vs_fictional  = 0.0125   F(1,14393)=181.9
+  eta2_brand_10levels           = 0.0371   F(38,14356)=14.5
+  eta2_params                   = 0.8236   F(2,14392)=33597.1
+  eta2_position                 = 0.0646   F(9,14385)=110.3
+
+--- lang = en  (n = 7198) ---
+  eta2_brand_real_vs_fictional  = 0.0136   F(1,7196)=99.4
+  eta2_brand_10levels           = 0.0389   F(38,7159)=7.6
+  eta2_params                   = 0.8183   F(2,7195)=16201.0
+  eta2_position                 = 0.0633   F(9,7188)=54.0
+
+--- lang = zh  (n = 7197) ---
+  eta2_brand_real_vs_fictional  = 0.0114   F(1,7195)=82.9
+  eta2_brand_10levels           = 0.0354   F(38,7158)=6.9
+  eta2_params                   = 0.8289   F(2,7194)=17431.0
+  eta2_position                 = 0.0659   F(9,7187)=56.4
