@@ -34,6 +34,8 @@ plt.rcParams.update({
     "savefig.dpi": 300,
     "savefig.bbox": "tight",
     "savefig.pad_inches": 0.05,
+    "pdf.fonttype": 42,      # TrueType embedding
+    "ps.fonttype": 42,
 })
 
 MODEL_LABELS = {

@@ -2,7 +2,7 @@
 
 Code, raw data, and analysis outputs for the paper:
 
-> Xi Chu. *Incumbent Advantage: Brand Bias and Cognitive Manipulation Dynamics in LLM Recommendation Systems.* arXiv:2606.17443.
+> Xi Chu and YuPeng Hou. *Incumbent Advantage: Brand Bias and Cognitive Manipulation Dynamics in LLM Recommendation Systems.* arXiv:2606.17443.
 
 All brands competing against the real incumbent in these experiments are **fictional**, and all authority/evidence claims in the stimuli are **fabricated for research purposes**. No real merchant is affected.
 
@@ -24,8 +24,8 @@ english_only_tables/  English-only breakdowns of Exp 1c (gradient) and Exp 1d (v
 | Exp 2a — bias-language breakthrough | `code/exp2a_bias_breakthrough.py` | `results/exp2a/` |
 | Exp 2b — intensity & stacking | `code/exp2b_intensity_stacking.py` | `results/exp2b/` |
 | BSV derivation / GLMM & GEE | `code/exp2_bsv_derivation.py`, `code/exp2_glmm.py` | `results/exp2_bsv/`, `results/exp2_glmm/` |
-| Exp 3 — multi-brand GEO competition | `code/exp3_game.py` | `results/exp3/` |
-| Exp 4 — RAG architectural probe | `code/exp4_rag.py` | `results/exp4/` |
+| Exp 3 — multi-brand GEO competition | `code/exp3_game.py` (report: `code/exp3_report_regenerator.py`) | `results/exp3/` |
+| Exp 4 — RAG architectural probe | `code/exp4_rag.py` (report: `code/exp4_report_regenerator.py`) | `results/exp4/` |
 | Robustness — search goods | `code/exp_search_goods_robustness.py` | `results/search_goods/` |
 | Incumbent probe (brand validation) | `code/incumbent_probe.py` | `results/incumbent_probe/` |
 
@@ -34,11 +34,6 @@ Each `results/<exp>/` folder contains the raw per-API-call CSV (one row per call
 ## Reproducing
 
 Analysis scripts run offline from the committed CSVs. Re-running the experiments themselves requires API keys supplied via environment variables (`OPENAI_API_KEY`, `ANTHROPIC_API_KEY`, `GOOGLE_API_KEY`); no keys are stored in this repository. Model versions, prompts, personas, and condition definitions are embedded in each runner's `CONFIG` block and documented in the paper's appendices.
-
-## Errata (will be folded into the next arXiv version)
-
-- Appendix F.2 (RAG stage decomposition): "RAG-K5 **S0**: retrieval survival = 6.1%, generation selection = 100%" should read **S1**. Under K5 S0 the real brand never entered the top-5 (0/179 valid trials), so generation selection is undefined in that cell. See `results/exp4/exp4_raw.csv`.
-- The previously unreported RAG-K10 S0 cell: retrieval survival 100% (180/180), generation selection 100% (180/180) — with retrieval saturated and no optimizing challenger, the model selected the real brand in every valid trial.
 
 ## Languages
 
@@ -53,7 +48,7 @@ Code is released under the MIT License (see `LICENSE`). Data (CSV files under `r
 ```bibtex
 @article{chu2026incumbent,
   title   = {Incumbent Advantage: Brand Bias and Cognitive Manipulation Dynamics in {LLM} Recommendation Systems},
-  author  = {Chu, Xi},
+  author  = {Chu, Xi and Hou, YuPeng},
   journal = {arXiv preprint arXiv:2606.17443},
   year    = {2026}
 }

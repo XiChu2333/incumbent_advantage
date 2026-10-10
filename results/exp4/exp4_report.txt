@@ -1,0 +1,59 @@
+EXP 4 — RAG Probe Report
+Generated: 2026-10-10 02:00:53
+Total rows: 1080   Parse failures: 5   Refusals: 0   Valid: 1075 (99.5%)
+Design: pipeline=3 x geo_condition=2 x subcat=2 x model=3 x lang=2 x repeat=15   subcats = ['moisturizer', 'sunscreen']
+
+========================================================================
+  1. ISR (%) by pipeline x GEO condition (Protocol β)
+========================================================================
+pipeline cond            Claude             GPT          Gemini             All
+direct   S0      100.0 (60/60)  100.0 (60/60)  100.0 (60/60)  100.0 (180/180)
+direct   S1       25.0 (15/60)   18.3 (11/60)   17.5 (10/57)   20.3 ( 36/177)
+rag-k10  S0      100.0 (60/60)  100.0 (60/60)  100.0 (60/60)  100.0 (180/180)
+rag-k10  S1       16.7 (10/60)   16.7 (10/60)   23.7 (14/59)   19.0 ( 34/179)
+rag-k5   S0        0.0 ( 0/60)    0.0 ( 0/60)    0.0 ( 0/59)    0.0 (  0/179)
+rag-k5   S1        5.0 ( 3/60)    6.7 ( 4/60)    6.7 ( 4/60)    6.1 ( 11/180)
+
+========================================================================
+  2. F.2 — Retrieval survival vs generation selection
+========================================================================
+rag-k10 S0: retrieval survival = 100.0% (180/180); generation selection = 100.0% (180/180)
+rag-k10 S1: retrieval survival = 100.0% (179/179); generation selection = 19.0% (34/179)
+           GEO brand: in top-K 100.0% (179/179); chosen 81.0% (145/179)
+rag-k5 S0: retrieval survival = 0.0% (0/179); generation selection = undefined (never retrieved)
+rag-k5 S1: retrieval survival = 6.1% (11/180); generation selection = 100.0% (11/11)
+           GEO brand: in top-K 52.2% (94/180); chosen 52.2% (94/180)
+direct  S1: GEO brand chosen 79.7%
+
+========================================================================
+  3. F.3 — Embedding similarity (cosine to query), reconstructed from retrieval_scores_all
+========================================================================
+neutral fictional descriptions: mean = 0.471, SD = 0.053, n = 6103
+GEO (Authority) descriptions:   mean = 0.474, SD = 0.058, n = 359
+real brand:                     mean = 0.447, SD = 0.033, n = 718;  fictional-brand median = 0.474
+ΔSim (GEO − neutral) = +0.0034;  Cohen's d = 0.06;  unpaired t = 1.18, p = 0.240
+paired per-trial (GEO vs mean neutral in same trial, n = 359): t(358) = 3.43, p = 6.8e-04, d_z = 0.18
+   moisturizer en: neutral 0.4022  GEO 0.3987  real 0.4005  Δ = -0.0035
+   moisturizer zh: neutral 0.5046  GEO 0.5069  real 0.4813  Δ = +0.0023
+   sunscreen   en: neutral 0.4463  GEO 0.4494  real 0.4308  Δ = +0.0031
+   sunscreen   zh: neutral 0.5307  GEO 0.5432  real 0.4739  Δ = +0.0125
+real brand mean retrieval rank: 8.50/10   GEO brand mean retrieval rank (S1): 4.84/10 (expected for a neutral fictional brand ≈ 5.17)
+GEO brand enters top-5 in 52.2% of RAG-K5 S1 trials; chance rate for a neutral fictional brand ≈ 54.9%
+
+========================================================================
+  4. F.4 — Model differences at S1
+========================================================================
+rag-k5   S1: Claude 5.0%, GPT 6.7%, Gemini 6.7%;  chi2(2) = 0.19, p = 0.91
+direct   S1: Claude 25.0%, GPT 18.3%, Gemini 17.5%;  chi2(2) = 1.23, p = 0.54
+
+========================================================================
+  5. F.5 — RAG-K5 S1 trials in which the real brand entered the top-5
+========================================================================
+count: 11/180 (6.1%); cells: {('moisturizer', 'en'): 11}
+real brand rank in these trials: {5: 11};  GEO brand rank: {7: 11}
+real similarity: [0.4005];  GEO similarity: [0.3971, 0.3973]
+chose real when retrieved: 11/11
+RAG-K5 S0: real brand best rank = 6 (never in top-5: 0/179)
+RAG-K10 S1 trials with the same rank shift (real rank 5, GEO rank 7): 9/179
+Interpretation: in the EN-moisturizer cell the Authority text LOWERS the GEO brand's similarity below the real brand's,
+so the GEO brand drops to rank 7 and the real brand rises from rank 6 to rank 5 (into the top-5).

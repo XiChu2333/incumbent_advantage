@@ -117,9 +117,19 @@ def fig3_summary():
             h += nongeo_count * (nongeo_rate / nongeo_count) ** 2
         hhi[s] = h
 
-    # KL divergence per model (paper-stated values; the exact computation
-    # used a subcategory-weighted brand-level divergence measure)
-    kl_values = {"claude-sonnet": 0.048, "gpt-4o-mini": 0.358, "gemini-flash": 1.658}
+    # KL divergence per model, D_KL(S4 || S0) over the two-category
+    # distribution {P(incumbent), P(fictional)}, natural log, zero cells
+    # floored at eps=1e-6 (same definition as exp3_game.py analyze_exp3).
+    # NOTE: because P(fictional | S0) = 0, magnitudes depend on eps and
+    # should be read only as an ordering.
+    eps = 1e-6
+    kl_values = {}
+    for m in MODEL_ORDER:
+        p4 = np.array([isr["S4"][m] / 100, 1 - isr["S4"][m] / 100])
+        p0 = np.array([isr["S0"][m] / 100, 1 - isr["S0"][m] / 100])
+        p4 = np.clip(p4, eps, None); p4 /= p4.sum()
+        p0 = np.clip(p0, eps, None); p0 /= p0.sum()
+        kl_values[m] = float(np.sum(p4 * np.log(p4 / p0)))
 
     # Subcategory ISR at S1 and S4
     subcat_isr = {}

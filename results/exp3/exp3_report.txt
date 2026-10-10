@@ -1,0 +1,71 @@
+EXP 3 — Multi-Agent GEO Competition Report
+Generated: 2026-10-10 01:59:39
+Total rows: 4801  (designed calls: 4,800; the CSV may contain a retried duplicate)
+Parse failures: 56   Refusals: 0
+Valid: 4745 (98.8% of rows)
+Valid Protocol β (single choice): 2360   Valid Protocol α (ranking): 2385
+
+========================================================================
+  TABLE 3 — Incumbent Survival Rate (%) — Protocol β
+========================================================================
+Scen   k |         Claude            GPT         Gemini |            All
+S0     0 | 100.0 (160/160) 100.0 (160/160) 100.0 (160/160) | 100.0 (480/480)
+S1     1 |  28.8 ( 46/160)  16.2 ( 26/160)  14.3 ( 22/154) |  19.8 (94/474)
+S2     3 |  71.9 (115/160)  21.9 ( 35/160)  71.9 (110/153) |  55.0 (260/473)
+S3     6 |  89.4 (143/160)  46.9 ( 75/160)  91.2 (134/147) |  75.4 (352/467)
+S4     9 |  99.4 (159/160)  96.2 (154/160)  84.9 (124/146) |  93.8 (437/466)
+
+========================================================================
+  Mean incumbent rank (Protocol α; 1 = top)
+========================================================================
+S0: Claude=1.18  GPT=3.92  Gemini=1.00  All=2.03  (n=480)
+S1: Claude=1.71  GPT=2.77  Gemini=1.90  All=2.13  (n=480)
+S2: Claude=3.28  GPT=4.44  Gemini=3.12  All=3.62  (n=473)
+S3: Claude=5.93  GPT=6.19  Gemini=4.49  All=5.54  (n=478)
+S4: Claude=3.39  GPT=4.03  Gemini=7.08  All=4.81  (n=474)
+
+========================================================================
+  GEO payoff per brand, HHI, challenger visibility (Protocol β)
+========================================================================
+Per-brand fictional share at S0 (baseline for payoff): 0.0000
+Scen   k     ISR  GEO share  payoff/brand  nonGEO chosen     HHI
+S0     0  100.0%     0.0000           nan        0/480     1.000
+S1     1   19.8%     0.8017        0.8017        0/474     0.682
+S2     3   55.0%     0.4503        0.1501        0/473     0.370
+S3     6   75.4%     0.2463        0.0410        0/467     0.578
+S4     9   93.8%     0.0622        0.0069        0/466     0.880
+Total challenger visibility: k=1 0.802  ->  k=9 0.062
+
+========================================================================
+  E.2 — Hypothesis tests
+========================================================================
+H3a  S0 vs S1 ISR: chi2(1) = 639.6 (Yates 636.2), p = 4.16e-141
+H3b  Cochran–Armitage trend S1->S4: z = 23.6, p = 2.7e-123;  S2->S4: z = 13.7, p = 1.7e-42
+H3c  non-GEO fictional recommended: 0/1414 valid β trials in S1–S3 (0/1880 over S1–S4); exact 95% upper bound (Clopper–Pearson) = 0.26%; binomial P(0 | n=1414, p=0.01) = 6.7e-07
+H3d  S4 model differences: chi2(2) = 29.84, p = 3.3e-07  (159/160, 154/160, 124/146)
+H3e  payoff decay: NLS y = 0.80·exp(-0.82(k-1)), R² = 0.998, half-life = 0.85 brands; log-linear slope 0.57 -> half-life 1.21 brands
+
+========================================================================
+  E.3 — KL(S4 || S0), two-category {incumbent, fictional}, natural log, eps = 1e-06
+========================================================================
+NOTE: P(fictional | S0) = 0 for every model, so magnitudes depend on eps; read as an ordering only.
+Claude  KL = 0.048   (1 - ISR_S4 = 0.6%)
+GPT     KL = 0.358   (1 - ISR_S4 = 3.8%)
+Gemini  KL = 1.658   (1 - ISR_S4 = 15.1%)
+
+========================================================================
+  E.4 — Language effect (pooled S1–S4, Protocol β)
+========================================================================
+All      EN  63.9% (600/939)  ZH  57.7% (543/941)  chi2(1) = 7.31, p = 0.0069 (Yates; 7.56, p = 0.0060 uncorrected)  Cohen's h = 0.13
+Claude   EN  81.6% (261/320)  ZH  63.1% (202/320)  chi2(1) = 26.27, p = 0.0000 (Yates; 27.19, p = 0.0000 uncorrected)  Cohen's h = 0.42
+GPT      EN  42.8% (137/320)  ZH  47.8% (153/320)  chi2(1) = 1.42, p = 0.2336 (Yates; 1.61, p = 0.2039 uncorrected)  Cohen's h = 0.10
+Gemini   EN  67.6% (202/299)  ZH  62.5% (188/301)  chi2(1) = 1.50, p = 0.2210 (Yates; 1.71, p = 0.1903 uncorrected)  Cohen's h = 0.11
+
+========================================================================
+  E.4 — Subcategory effect (pooled S1–S4, Protocol β)
+========================================================================
+chi2(3) = 19.62, p = 2.0e-04
+  moisturizer    ISR pooled  53.4% (252/472)   S1   8.3%   S4  90.7%
+  sunscreen      ISR pooled  65.7% (307/467)   S1  31.9%   S4  98.2%
+  cleanser       ISR pooled  59.1% (278/470)   S1  20.2%   S4  92.2%
+  bha_exfoliant  ISR pooled  65.0% (306/471)   S1  19.3%   S4  94.1%
